@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="background:#eefcf9">
+<head>
+    <style>
+        #titleBox > button {width:16%; height: 30px; display: inline-block;}
+    </style>
+    <script type="text/javascript">
+        function changeIframeSrc(stream) {
+            document.getElementById("theaterMode").src = document.getElementById(stream).src;
+        }
+    </script>
+</head>
+<div style="height: 75vh;">
+    <iframe id="theaterMode" width="100%" height="100%" src="https://www.youtube.com/embed/3ti6RRk-OVQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div style="height:25vh;">
+<div id="titleBox" style="padding: 5px;">
+<button onclick="changeIframeSrc('coachellastream')">Coachella</button>
+<button onclick="changeIframeSrc('outdoorstream')">Outdoor</button>
+<button onclick="changeIframeSrc('saharastream')">Sahara</button>
+<button onclick="changeIframeSrc('mojavestream')">Mojave</button>
+<button onclick="changeIframeSrc('gobistream')">Gobi</button>
+<button onclick="changeIframeSrc('yumastream')">Yuma</button>
+</div>
+<div>
+    <iframe width="16%" id="coachellastream" src="https://www.youtube.com/embed/3ti6RRk-OVQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="16%" id="outdoorstream" src="https://www.youtube.com/embed/3C57SwK9QvY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="16%" id="saharastream" src="https://www.youtube.com/embed/o7q7ahC5eMI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="16%" id="mojavestream" src="https://www.youtube.com/embed/dZgeMO52kvg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="16%" id="gobistream" src="https://www.youtube.com/embed/7Zv5aSik3Fk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="16%" id="yumastream" src="https://www.youtube.com/embed/RzFS36bQvv0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+</html>
+
+<css
