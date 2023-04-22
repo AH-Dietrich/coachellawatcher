@@ -6,6 +6,28 @@
     <style>
         #titleBox > button {width:16%; height: 30px; display: inline-block; cursor: pointer;}
     </style>
+    <script>
+        var noFocus = false;
+
+        function refreshLaggedStreams(){
+            const streams = document.getElementById("streamBox");
+            for (const child of streams.children) {
+                child.src = child.src
+            }
+        }
+        
+        document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === 'visible') {
+            if (noFocus)
+            {
+                refreshLaggedStreams()
+            }
+            noFocus = false;
+        } else {
+            noFocus = true;
+        }
+        });
+</script>
     <script type="text/javascript">
         function changeIframeSrc(stream) {
             document.getElementById("theaterMode").src = document.getElementById(stream).src;
@@ -33,7 +55,7 @@
 <button onclick="changeIframeSrc('gobistream')">Gobi</button>
 <button onclick="changeIframeSrc('yumastream')">Yuma</button>
 </div>
-<div>
+<div id="streamBox">
     <iframe width="16%" id="coachellastream" src="https://www.youtube.com/embed/3ti6RRk-OVQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <iframe width="16%" id="outdoorstream" src="https://www.youtube.com/embed/3C57SwK9QvY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <iframe width="16%" id="saharastream" src="https://www.youtube.com/embed/o7q7ahC5eMI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
